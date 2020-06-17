@@ -18,7 +18,7 @@ jobs:
       - run: docker build -t registry.heroku.com/ktor--devops-docker2020/web .
       - run: docker push registry.heroku.com/ktor--devops-docker2020/web
       - run: heroku container:release web --app $HEROKU_APP_NAME
-      - run: heroku logs
+      - run: heroku logs --app $HEROKU_APP_NAME
             
       
 workflows:
