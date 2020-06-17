@@ -13,8 +13,10 @@ jobs:
       
 workflows:
   build_and_deploy:
-    context: deployment
     jobs:
-      - build
+      - build:
+          context: deployment
+
+        
 
    
