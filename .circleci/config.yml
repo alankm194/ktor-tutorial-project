@@ -8,8 +8,8 @@ jobs:
       image: ubuntu-1604:202004-01
     steps: 
       - checkout 
-      - docker build .
-      - ls 
+      - run: docker build .
+      - run: ls 
 workflows:
   build_and_deploy:
     jobs:
