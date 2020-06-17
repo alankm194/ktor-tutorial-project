@@ -5,7 +5,6 @@ orbs:
   heroku: circleci/heroku@1.0.1
 jobs:
   build:
-    context: deployment
     executor: heroku/default
     steps: 
       - checkout 
@@ -14,6 +13,7 @@ jobs:
       
 workflows:
   build_and_deploy:
+    context: deployment
     jobs:
       - build
 
